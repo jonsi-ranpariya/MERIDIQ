@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@lang/*": [
+        "lang/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@interface/*": [
+        "interfaces/*"
+      ],
+      "@partials/*": [
+        "partials/*"
+      ],
+      "@configs/*": [
+        "configs/*"
+      ],
+      "@validations/*": [
+        "validations/*"
+      ],
+      "@provider/*": [
+        "provider/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@icons/*": [
+        "components/icons/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@src/*": [
+        "*"
+      ]
+    }
+  }
+}

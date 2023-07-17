@@ -1,0 +1,424 @@
+@import "./toastify.css";
+
+:root,
+body,
+html {
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+	--primary: #5551ce;
+	--secondary: #1a1b1c;
+}
+
+@supports (font-variation-settings: normal) {
+	:root,
+	body,
+	html {
+		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+	}
+}
+
+.dark ::selection {
+	color: white;
+	background: var(--primary);
+}
+
+html {
+	@apply accent-primary;
+}
+html.dark {
+	color-scheme: dark;
+}
+
+@tailwind base;
+@tailwind components;
+
+.side-bar-item.selected::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -3px;
+	background-color: var(--primary);
+	bottom: 0;
+	height: 100%;
+	width: 3px;
+}
+
+hr {
+	@apply dark:border-gray-600;
+}
+@tailwind utilities;
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	/* border: 1px solid transparent; */
+	/* -webkit-text-fill-color: transparent; */
+	/* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Remove Number Input arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+/* .btn {
+  @apply font-medium py-2 px-4 rounded-md cursor-pointer focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50 transition duration-150 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-primary text-dark;
+}
+
+.btn-secondary {
+  @apply bg-dark text-white focus:ring-dark focus:ring-opacity-25;
+} */
+
+/* .label-top {
+  line-height: 0.05;
+}
+.label-transition {
+  transition: font-size 0.05s, line-height 0.1s;
+}
+:global(label.text-xs) {
+  font-size: 0.7rem;
+} */
+
+.prose-sm h1,
+.prose-sm h2,
+.prose-sm h3,
+.prose-sm h4,
+.prose-sm h5,
+.prose-sm h6 {
+	font-weight: 600;
+}
+
+/* 
+.prose p {
+    margin-bottom: 1rem;
+}
+
+.prose ul:not(.ck) ,
+.prose ol:not(.ck) {
+    margin-bottom: 1rem;
+    padding-left: 2rem !important;
+    list-style-type: initial;
+}
+.prose ol:not(.ck){
+    list-style-type: decimal;
+} */
+
+.visibility_hidden {
+	/* display: none !important; */
+	opacity: 0;
+	position: absolute !important;
+	z-index: -5;
+	/* top: -9999px !important; */
+	/* right: -9999px !important; */
+}
+
+.start-hero::after {
+	content: "";
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to right, #f5f5f5 40%, #f5f5f500 60%);
+}
+.dark .start-hero::after {
+	background: linear-gradient(to right, #040404 40%, #1c1b1a00 60%);
+}
+
+.react-html5-camera-photo > .display-error {
+	width: auto !important;
+}
+
+/* body {
+    background-color: rgb(30, 30, 40);
+}
+.g-recaptcha {
+    overflow: hidden;
+    width: 298px;
+    height: 74px;
+}
+iframe {
+    margin: -5px 0px 0px -50px;
+}
+
+iframe body {
+    background: #ef4444;
+} */
+
+.rc-anchor-normal {
+	height: unset;
+	width: unset;
+}
+
+.rc-anchor {
+	border-radius: unset;
+}
+
+iframe[title="reCAPTCHA"] {
+	border-radius: 4px;
+	width: 302px;
+	height: 76px;
+}
+
+#editorjs::selection {
+	color: var(--secondary);
+	background-color: var(--primary);
+}
+
+.dark .ce-block--selected .ce-block__content {
+	background: #ffffff20;
+}
+
+.dark .apexcharts-svg {
+	background: transparent !important;
+}
+
+.dark .ce-inline-toolbar {
+	color: #040404;
+}
+
+table tr {
+	position: relative;
+}
+
+/* table tr td:last-child,
+table tr th:last-child {
+	position: sticky;
+	right: 0;
+} */
+/* MASONRY */
+
+.masonry ul {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.masonry li {
+	height: 220px;
+	flex-grow: 1;
+}
+
+.masonry li:last-child {
+	flex-grow: 10000;
+	height: 0;
+}
+
+.masonry img {
+	max-height: 100%;
+	min-width: 100%;
+	object-fit: cover;
+	vertical-align: bottom;
+}
+
+@media (max-aspect-ratio: 1/1) {
+	.masonry li {
+		height: 20vh;
+	}
+}
+@media (max-height: 480px) {
+	.masonry li {
+		height: 60vh;
+	}
+}
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+	.masonry ul {
+		flex-direction: row;
+	}
+
+	.masonry li {
+		height: auto;
+		width: 100%;
+	}
+
+	.masonry img {
+		width: 100%;
+		max-height: 65vh;
+		min-width: 0;
+	}
+}
+
+.alternate-tr:nth-child(even) {
+	@apply bg-gray-100 dark:bg-gray-800 border-b border-t dark:border-gray-700;
+}
+
+.tox-tinymce {
+	border-radius: 4px;
+}
+
+canvas {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+img {
+	@apply select-none;
+}
+.sliderHandle {
+	@apply w-4 h-4 rounded-full bg-gray-200;
+}
+.downloading .sliderHandle {
+	@apply hidden;
+}
+
+.hide-controls .moveable-control,
+.hide-controls .moveable-line,
+.hide-controls .moveable-rotation {
+	@apply hidden;
+}
+
+.dz-preview.dz-image-preview,
+.dz-details,
+.dz-success-mark,
+.dz-error-mark {
+	@apply hidden;
+}
+
+.select fieldset {
+	@apply border-none;
+}
+
+.topBar-search::-webkit-scrollbar {
+	@apply w-0;
+}
+.topBar-search.visible::-webkit-scrollbar {
+	@apply w-2;
+}
+
+.topBar-search::-webkit-scrollbar-track {
+	@apply hover:bg-gray-100 dark:hover:bg-gray-800;
+}
+
+.topBar-search::-webkit-scrollbar-thumb {
+	@apply bg-gray-200 rounded-full hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600;
+}
+
+.soft-searchbar::-webkit-scrollbar {
+	@apply w-2 h-2;
+}
+
+.soft-searchbar::-webkit-scrollbar-track {
+	@apply hover:bg-gray-100 dark:hover:bg-gray-800;
+}
+
+.soft-searchbar::-webkit-scrollbar-thumb {
+	@apply bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	@apply bg-primary h-4 w-4 rounded-full;
+}
+
+.slider::-moz-range-thumb {
+	-moz-appearance: none;
+	@apply bg-primary h-4 w-4 rounded-full;
+}
+
+td {
+	@apply first-of-type:rounded-l-xl last-of-type:rounded-r-xl align-middle;
+}
+.alternate-tr td {
+	@apply first-of-type:rounded-none last-of-type:rounded-none;
+}
+
+.pagination-item {
+	@apply h-8 w-8 flex text-sm select-none justify-center items-center rounded-lg cursor-pointer hover:bg-primary/10;
+}
+.pagination-item.disabled {
+	@apply pointer-events-none text-gray-500;
+}
+.pagination-item.selected {
+	@apply bg-primary text-white hover:bg-primary/90;
+}
+
+#top_bar_with_bg.scrolled {
+	@apply lg:bg-white/90 dark:lg:bg-dimGray/90 lg:shadow lg:focus-within:bg-white dark:lg:focus-within:bg-dimGray backdrop-blur-[2px];
+}
+
+@media (max-width: 768px) {
+	.responsive-calendar {
+		font-size: 8px !important;
+	}
+}
+
+/* .DatePicker {
+	z-index: 0;
+}
+.DatePicker__calendarContainer {
+	z-index: 9999;
+} */
+
+.DatePicker__calendarContainer {
+	z-index: 9999;
+}
+
+@layer base {
+	html {
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+
+.desktop-sidebar {
+	@apply w-72 overflow-x-hidden;
+}
+.desktop-sidebar.sticked {
+	@apply w-16 hover:w-72;
+}
+
+.mobile-sidebar .sidebar-item,
+.desktop-sidebar .sidebar-item,
+.desktop-sidebar.sticked:hover .sidebar-item {
+	@apply py-2.5 px-5;
+}
+.desktop-sidebar.sticked .sidebar-item {
+	@apply px-3;
+}
+
+.desktop-sidebar .sidebar-item-parent,
+.desktop-sidebar.sticked:hover .sidebar-item-parent {
+	@apply pr-3;
+}
+.desktop-sidebar.sticked .sidebar-item-parent {
+	@apply pr-2;
+}
+
+.desktop-sidebar .sidebar-item-items,
+.desktop-sidebar.sticked:hover .sidebar-item-items {
+	@apply block;
+}
+.desktop-sidebar.sticked .sidebar-item-items {
+	@apply hidden;
+}
+
+.desktop-sidebar .sidebar-item-text,
+.desktop-sidebar .sidebar-item-chevron,
+.desktop-sidebar.sticked:hover .sidebar-item-text,
+.desktop-sidebar.sticked:hover .sidebar-item-chevron {
+	@apply block;
+}
+.desktop-sidebar.sticked .sidebar-item-text,
+.desktop-sidebar.sticked .sidebar-item-chevron {
+	@apply hidden;
+}
+
+.ProseMirror {
+	@apply outline-none min-h-[14rem] max-h-[20rem] relative overflow-y-auto px-2 soft-searchbar;
+}

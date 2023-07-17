@@ -1,0 +1,128 @@
+{
+  "short_name": "MERIDIQ",
+  "name": "MERIDIQ",
+  "description": "Patient record system & Aesthetic app for clinics and beauty salons",
+  "icons": [
+    {
+      "src": "icons/192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/monochrome_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "natural",
+  "categories": [
+    "health",
+    "medical"
+  ],
+  "shortcuts": [
+    {
+      "name": "Clients",
+      "short_name": "Clients",
+      "description": "Manage and View Clients",
+      "url": "./clients",
+      "icons": [
+        {
+          "src": "icons/shortcuts/clients/clients.png",
+          "sizes": "96x96",
+          "type": "image/png",
+          "purpose": "any"
+        },
+        {
+          "src": "icons/shortcuts/clients/maskable_icon_x96.png",
+          "type": "image/png",
+          "sizes": "96x96",
+          "purpose": "maskable"
+        }
+      ]
+    },
+    {
+      "name": "Registration Portal",
+      "short_name": "Portal",
+      "description": "Patient registration portal",
+      "url": "./registration-portal?redirect=1",
+      "icons": [
+        {
+          "src": "icons/shortcuts/portal/portal.png",
+          "sizes": "96x96",
+          "type": "image/png",
+          "purpose": "any"
+        },
+        {
+          "src": "icons/shortcuts/portal/maskable_icon_x96.png",
+          "type": "image/png",
+          "sizes": "96x96",
+          "purpose": "maskable"
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "short_name": "Settings",
+      "description": "Manage Questionnaries, Subscription, App Language and more.",
+      "url": "./settings",
+      "icons": [
+        {
+          "src": "icons/shortcuts/settings/settings.png",
+          "type": "image/png",
+          "purpose": "any",
+          "sizes": "96x96"
+        },
+        {
+          "src": "icons/shortcuts/settings/maskable_icon_x96.png",
+          "type": "image/png",
+          "sizes": "96x96",
+          "purpose": "maskable"
+        }
+      ]
+    },
+    {
+      "name": "Company Settings",
+      "short_name": "Company Settings",
+      "description": "Manage Company Profile and Users",
+      "url": "./company-settings",
+      "icons": [
+        {
+          "src": "icons/shortcuts/company/company-settings.png",
+          "sizes": "96x96",
+          "type": "image/png",
+          "purpose": "any"
+        },
+        {
+          "src": "icons/shortcuts/company/maskable_icon_x96.png",
+          "type": "image/png",
+          "sizes": "96x96",
+          "purpose": "maskable"
+        }
+      ]
+    }
+  ]
+}
